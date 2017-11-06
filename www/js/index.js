@@ -42,10 +42,6 @@ $(document).on("pagecreate","#pageone",function(){
 	loadCurrent();
 });
 
-$(document).on("pageload","#pageone",function(){
-	console.log("page load");
-	loadCurrent();
-}
 function saveCurrent() {
     window.localStorage.setItem("hideKey",hide);
 	window.localStorage.setItem("tapKey",tapped);
