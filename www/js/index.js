@@ -14,7 +14,6 @@ function onDeviceReady(){
 }
 
 $(document).on("pagecreate","#pageone",function(){
-	loadCurrent();
     
   	$('#tapholdtext').on("taphold",function(){
     	$(this).hide();
@@ -40,14 +39,18 @@ $(document).on("pagecreate","#pageone",function(){
 		saveCurrent();
   	});  
 
-
+	loadCurrent();
 });
 
-
+$(document).on("pageload","#pageone",function(){
+	console.log("page load");
+	loadCurrent();
+}
 function saveCurrent() {
     window.localStorage.setItem("hideKey",hide);
 	window.localStorage.setItem("tapKey",tapped);
 	window.localStorage.setItem("swipeKey",swiped);
+	console.log("saved");
 }
 
 function getCurrent(){
