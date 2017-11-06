@@ -1,4 +1,7 @@
 <!-- For more info on jQuery Mobile,  touch gestures and other useful events see : http://api.jquerymobile.com/category/events/ -->
+var hide = false;
+var tapped = false;
+var swiped = 0;
 
 //If device launched, run 'onDeviceReady' function
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -8,11 +11,6 @@ function onDeviceReady(){
     document.addEventListener("resume", onResume, false);
     //If app is paused, run 'onPause' function
     document.addEventListener("pause", onPause, false);
-	
-	var hide = false;
-	var tapped = false;
-	var swiped = 0;
-	
 	loadCurrent();
 }
 
