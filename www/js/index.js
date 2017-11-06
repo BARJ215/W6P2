@@ -13,7 +13,6 @@ function onDeviceReady(){
 	var tapped = false;
 	var swiped = 0;
 	
-	getCurrent();
 	loadCurrent();
 }
 
@@ -23,29 +22,29 @@ $(document).on("pagecreate","#pageone",function(){
   	$('#tapholdtext').on("taphold",function(){
     	$(this).hide();
         hide = true;
+		saveCurrent();
  	});                       
 
 	$('#taptext').on("tap",function(){
     	$(this).css('color', 'red');
         tapped = true;
+		saveCurrent();
  	}); 
 
 	$('#swipetext').on("swipeleft",function(){
     	$(this).css('color', 'green');
         swiped = 1;
+		saveCurrent();
   	});
     
     $('#swipetext').on("swiperight",function(){
     	$(this).css('color', 'blue');
         swiped = 2;
+		saveCurrent();
   	});  
 
 
 });
-
-function onPause(){
-	saveCurrent();
-}
 
 
 function saveCurrent() {
@@ -62,6 +61,8 @@ function getCurrent(){
 }
 
 function loadCurrent(){
+	getCurrent();
+	
 	if(hide==true){
 		$('#tapholdtext').hide();		
 	}
