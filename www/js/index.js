@@ -10,12 +10,11 @@ function onDeviceReady(){
 	//If app is resumed, run 'onResume' function
     document.addEventListener("resume", onResume, false);
     //If app is paused, run 'onPause' function
-    document.addEventListener("pause", onPause, false);
-	loadCurrent();
+    document.addEventListener("pause", onPause, false);	
 }
 
 $(document).on("pagecreate","#pageone",function(){
-
+	loadCurrent();
     
   	$('#tapholdtext').on("taphold",function(){
     	$(this).hide();
