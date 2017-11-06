@@ -59,6 +59,8 @@ function getCurrent(){
 }
 
 function loadCurrent(){
+	console.log("Loading");
+	
 	getCurrent();
 	
 	if(hide==true){
@@ -77,4 +79,6 @@ function loadCurrent(){
 		default:
 			break;
 	}
+	
+	console.log("Load finished")
 }
