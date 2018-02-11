@@ -6,10 +6,10 @@
         id        = "mob.app.dev.lifecycle"
         version   = "1.0.0">
 
-    <name>Worksheet 6 Part 2</name>
+    <name>BackendlessTest</name>
 
     <description>
-        Worksheet  exercises
+        Backendless test
     </description>
 
     <author href="worcester.ac.uk" email="BARJ2_15@uni.worc.ac.uk">
